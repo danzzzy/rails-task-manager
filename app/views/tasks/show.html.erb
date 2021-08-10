@@ -1,5 +1,5 @@
 <div class="container mt-3 p-3">
-  <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+  <div class="card text-white bg-secondary mb-3 p-3" style="max-width: 25rem;">
   <div class="card-header d-flex justify-content-between align-items-center"><h2>Details Page</h2>
     <%= link_to "Update", update_task_path, class: "btn btn-sm btn-warning"%>
   </div>
@@ -8,9 +8,9 @@
     <p class="card-text mb-5">Description: <%= @task.details %></p>
       <div class="d-flex justify-content-between">
       <% if @task.completed %>
-          <p><i class="far fa-check-square"></i> This task is completed</p>
+          <p><i class="far fa-check-square"></i> Completed</p>
           <% else %>
-          <p><i class="far fa-square"></i> Need to complete this task</p>
+          <p><i class="far fa-square"></i> Completed</p>
       <% end %>
       <%= link_to "🚮", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
       </div>

@@ -1,7 +1,7 @@
 <div class="container mt-3 p-3 bg-secondary text-white">
-    <div class="d-flex ">
+    <div class="d-flex align-items-center">
     <h1 class="me-4">My Tasks</h1>
-    <%= link_to "➕ New Task", new_task_path, class: "btn btn-light mb-3" %>
+    <%= link_to "➕ New Task", new_task_path, class: "btn btn-light btn-sm mb-3" %>
     </div>
     <% @tasks.each do |task| %>
       <% if task.completed %>
