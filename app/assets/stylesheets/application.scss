@@ -1,0 +1,20 @@
+@import 'bootstrap/scss/bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "components/task_card";
+
+.a-tag {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  &:hover {
+    color: rgba(0, 0, 0, 1)
+  }
+}
+
+.chores-tag {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  &:hover {
+    color: rgba(128, 128, 128, 0.8)
+  }
+}

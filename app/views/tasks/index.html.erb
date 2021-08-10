@@ -1,0 +1,11 @@
+<div class="container mt-3">
+  <h1 class="mb-3">My Tasks</h1>
+    <% @tasks.each do |task| %>
+      <% if task.completed %>
+      <p><i class="far fa-check-square"></i> <%= link_to task.title, task_path(task.id), class: "chores-tag"  %></p>
+      <% else %>
+      <p><i class="far fa-square"></i> <%= link_to task.title, task_path(task.id), class: "chores-tag" %></p>
+      <% end %>
+    <% end %>
+  <%= link_to "Create New Task", new_task_path, class: "btn btn-secondary" %>
+</div>
