@@ -1,11 +1,15 @@
-<div class="container mt-3">
-  <h1 class="mb-3">My Tasks</h1>
+<div class="container mt-3 p-3 bg-secondary text-white">
+    <div class="d-flex ">
+    <h1 class="me-4">My Tasks</h1>
+    <%= link_to "➕ New Task", new_task_path, class: "btn btn-light mb-3" %>
+    </div>
     <% @tasks.each do |task| %>
       <% if task.completed %>
-      <p><i class="far fa-check-square"></i> <%= link_to task.title, task_path(task.id), class: "chores-tag"  %></p>
+      <p><i class="far fa-check-square"></i> <%= link_to task.title, task_path(task), class: "chores-tag"  %>
+      <%= link_to "🚮", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %></p>
       <% else %>
-      <p><i class="far fa-square"></i> <%= link_to task.title, task_path(task.id), class: "chores-tag" %></p>
+      <p><i class="far fa-square"></i> <%= link_to task.title, task_path(task), class: "chores-tag" %>
+      <%= link_to "🚮", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %></p>
       <% end %>
     <% end %>
-  <%= link_to "Create New Task", new_task_path, class: "btn btn-secondary" %>
 </div>

@@ -5,16 +5,17 @@
 
 .a-tag {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 1);
   &:hover {
-    color: rgba(0, 0, 0, 1)
+    color: rgba(0, 0, 0, 0.5)
   }
 }
 
 .chores-tag {
   text-decoration: none;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(199, 199, 199);
+  margin-left: 0.5em;
   &:hover {
-    color: rgba(128, 128, 128, 0.8)
+    color: rgba(0, 0, 0, 0.8)
   }
 }
